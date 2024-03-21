@@ -1,0 +1,49 @@
+<div id="swiper-container" class="swiper-container">
+  <div class="swiper-wrapper">
+    {fs110:fieldset_query(
+      @parts:id,@parts:datastore,'mv'
+    )}{fs110:foreach(@fs110:recordset)}
+      {img111:if(strlen(@fs110:image))}
+      <div class="swiper-slide -w-bg{=@id=}">
+        <img src="/_img/{=current_lang()=}/{=@fs110:datastore=}/{=@fs110:id=}/image/_/{=@parts:sess=}" alt="{=(strlen(@fs110:image_alt)?htmlspecialchars(@fs110:image_alt):preg_replace('/(.*)\..*$/','$1',@fs110:image))=}" />
+        <div class="-w-bg-reverse -w-bg-reverse{=@id=}">
+            <img class="-w-bg-reverse-img" src="/_img/{=current_lang()=}/{=@fs110:datastore=}/{=@fs110:id=}/image/_/{=@parts:sess=}" alt="{=(strlen(@fs110:image_alt)?htmlspecialchars(@fs110:image_alt):preg_replace('/(.*)\..*$/','$1',@fs110:image))=}" />
+        </div>
+      </div>
+      {/img111:if}
+    {/fs110:foreach}{/fs110:fieldset_query}
+  </div>
+  <div class="-w-scroll_wrap">
+      <a href="#concept"></a>
+  </div>
+  <div class="swiper-pagination"></div>
+  <div class="-w-box-main-image__wrp-txt-wrp">
+    	<div class="-w-top-main-txt">
+    		{if1:if(strlen(@mv_text_L))}
+                <div class="-w-catch-big-container">
+                    <div class="-w-top-main-txt01 -w-anime-title -w-no-over">
+                        {=mb_strimwidth(@mv_text_L,0,58,'')=}
+                    </div>
+                    <div class="-w-catch-cover-top"></div>
+                    <div class="-w-catch-cover-bottom"></div>
+                </div>
+            {/if1:if}
+            {if2:if(strlen(@mv_text_M))}
+                <div class="-w-catch-small-container">
+                    <div class="-w-catch-small -w-top-main-txt02">
+                        {=mb_strimwidth(@mv_text_M,0,137,'')=}
+                    </div>
+                </div>
+            {/if2:if}
+        </div>
+    </div>
+  <div class="-w-nav_wrapper" data-w-width="1">
+    <div class="-w-button">
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </div>
+  <svg class="-w-mask" version="1.1" id="mask" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="282px" height="282px" viewBox="0 0 282 282" style="enable-background:new 0 0 282 282;" xml:space="preserve">
+      <path class="st0" d="M1,0H0v281v1h1h281v-1C126.8,281,1,155.2,1,0z"></path>
+  </svg>
+</div>
