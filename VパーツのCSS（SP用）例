@@ -1,0 +1,74 @@
+@media screen and (max-width: 768px) {
+width: 100%;
+.swiper-wrapper {
+    height: 65vh;
+}
+.-w-button {
+}
+.-w-button > p {
+    margin-top:13px;
+}
+.-w-button > p > img {
+    width:43px;
+}
+.swiper-button-prev,
+.swiper-button-next {
+    margin-top:-20.5px;
+    background-size:contain;
+}
+.swiper-slide {
+    overflow: hidden;
+}
+.swiper-slide img {
+    max-width:120vh;
+    height:100%;
+    display: block;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    display: none;
+}
+.swiper-pagination {
+    right: 20px;
+    top: 55%;
+}
+.swiper-pagination-bullet {
+    height: 30px;
+}
+.swiper-pagination-bullet:before {
+    width: 7.5px;
+    height: 7.5px;
+}
+
+.-w-box-main-image__wrp-txt-wrp {
+    width: 95%;
+    max-width: 95%;
+    margin: 0 auto 0 5%;
+    right: 0;
+    left: -10%;
+    top: 50%;
+    justify-content: start;
+}
+
+.-w-top-main-txt01{
+    font-size: 7.5vw;
+}
+.-w-top-main-txt02{
+    font-size: 4vw;
+}
+.swiper-container{
+    width: 90%;
+    margin: 0;
+    margin-left: auto;
+}
+.-w-catch-cover-top{
+    width: 80%;
+    top: 2.425%;
+}
+.-w-catch-cover-bottom{
+    width: 60%;
+    bottom: 28.325%;
+}
+}
+23:05
